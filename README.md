@@ -1,10 +1,10 @@
-# AlpineVNCDocker
+# Alpine Fluxbox NoVNC
 
 ## Lightweight Alpine-based Docker Container with VNC and noVNC
 
 This project provides a lightweight Docker container based on Alpine Linux, featuring a VNC server accessible on port `5900` and an HTML5-based noVNC client available on port `6900`. It uses the Fluxbox desktop environment for simplicity and efficiency, making it ideal for deploying a Linux sandbox quickly.
 
-The base image size is approximately **182MB**.
+The base image size is approximately **1GB**.
 
 ---
 
@@ -31,7 +31,7 @@ docker run -d -p 5900:5900 -p 6900:6900 ghcr.io/amhoba2014/alpine-fluxbox-novnc:
 Run the following command to build the image from the Dockerfile:
 
 ```bash
-docker build . -t alpinevncdocker:latest
+docker build . -t alpine-fluxbox-novnc:latest
 ```
 
 ### 2. Run the Docker Container
@@ -40,14 +40,14 @@ docker build . -t alpinevncdocker:latest
 To expose the VNC service on port `5900` and noVNC on port `6900`:
 
 ```bash
-docker run -d -p 5900:5900 -p 6900:6900 alpinevncdocker:latest
+docker run -d -p 5900:5900 -p 6900:6900 alpine-fluxbox-novnc:latest
 ```
 
 #### With VNC Password
 To secure the VNC connection with a password:
 
 ```bash
-docker run -d -p 5900:5900 -p 6900:6900 -e VNC_PASSWORD="your_password" alpinevncdocker:latest
+docker run -d -p 5900:5900 -p 6900:6900 -e VNC_PASSWORD="your_password" alpine-fluxbox-novnc:latest
 ```
 
 ### 3. Access the VNC Desktop
@@ -71,7 +71,7 @@ RUN apk add --no-cache <package_name>
 After editing the Dockerfile, rebuild the Docker image:
 
 ```bash
-docker build . -t alpinevncdocker:latest
+docker build . -t alpine-fluxbox-novnc:latest
 ```
 
 ---
