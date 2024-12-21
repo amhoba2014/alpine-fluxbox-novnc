@@ -16,6 +16,15 @@ The base image size is approximately **182MB**.
 
 ---
 
+## How To Just Run
+
+Just run the following commands to start using it right away (or move on to the next step to build it yourself):
+
+```bash
+docker pull ghcr.io/amhoba2014/alpine-fluxbox-novnc ;
+docker run -d -p 5900:5900 -p 6900:6900 ghcr.io/amhoba2014/alpine-fluxbox-novnc:latest ;
+```
+
 ## How to Use
 
 ### 1. Build the Docker Image
